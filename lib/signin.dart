@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:repairhome/home.dart';
 
 import 'utitlities.dart';
 
@@ -73,7 +74,12 @@ class _SignInState extends State<SignIn> {
                         width: MediaQuery.of(context).size.width,
                         child: FlatBtn(
                           label: 'Sign in',
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Home()));
+                          },
                           fontWeight: FontWeight.w600,
                           labelColor: Colors.white,
                           color: Colors.blue,
@@ -138,7 +144,8 @@ class _SignInState extends State<SignIn> {
                       ),
                       InkWell(
                         onTap: () {},
-                        child: const Text('Sign up', style: TextStyle(color: Colors.blueAccent)),
+                        child: const Text('Sign up',
+                            style: TextStyle(color: Colors.blueAccent)),
                       ),
                     ],
                   ),
