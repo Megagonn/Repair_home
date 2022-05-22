@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:repairhome/signin.dart';
 
 import 'utitlities.dart';
 
 class SignUp extends StatefulWidget {
-  const SignUp({ Key? key }) : super(key: key);
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   State<SignUp> createState() => _SignUpState();
@@ -91,7 +92,12 @@ class _SignUpState extends State<SignUp> {
                         width: MediaQuery.of(context).size.width,
                         child: FlatBtn(
                           label: 'Sign up',
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SignIn()));
+                          },
                           fontWeight: FontWeight.w600,
                           labelColor: Colors.white,
                           color: Colors.blue,
@@ -147,20 +153,20 @@ class _SignUpState extends State<SignUp> {
                     ],
                   ),
                   const Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
-                        "• Don't have an account? ",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: const Text('Sign up', style: TextStyle(color: Colors.blueAccent)),
-                      ),
-                    ],
-                  ),
-                  const Spacer(),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     const Text(
+                  //       "• Don't have an account? ",
+                  //       style: TextStyle(color: Colors.grey),
+                  //     ),
+                  //     InkWell(
+                  //       onTap: () {},
+                  //       child: const Text('Sign up', style: TextStyle(color: Colors.blueAccent)),
+                  //     ),
+                  //   ],
+                  // ),
+                  // const Spacer(),
                 ],
               ),
             ),
