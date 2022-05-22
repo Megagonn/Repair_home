@@ -127,7 +127,7 @@ class OfferRow extends StatelessWidget {
                         color: Color(0xFFEEEDF3),
                       ),
                       child: const Text(
-                        'valid until june 30th',
+                        'valid until july 2nd',
                         style: TextStyle(fontWeight: FontWeight.w700),
                       ),
                     ),
@@ -138,7 +138,7 @@ class OfferRow extends StatelessWidget {
                           const SizedBox(
                               width: 90,
                               child: Text(
-                                'Cashback 5% from each repair',
+                                'Sale on appliances repair!',
                                 softWrap: true,
                                 style: TextStyle(fontWeight: FontWeight.w700),
                               )),
@@ -172,7 +172,7 @@ class OfferRow extends StatelessWidget {
                         color: Colors.lightBlue,
                       ),
                       child: const Text(
-                        'valid until june 30th',
+                        'Refer a friend',
                         style: TextStyle(fontWeight: FontWeight.w700),
                       ),
                     ),
@@ -183,10 +183,10 @@ class OfferRow extends StatelessWidget {
                           const SizedBox(
                               width: 90,
                               child: Text(
-                                'Cashback 5% from each repair',
+                                'Refer a friend and win a cashback',
                                 softWrap: true,
                                 style: TextStyle(fontWeight: FontWeight.w700),
-                              )),
+                              ),),
                           Expanded(
                               // flex: ,
                               child: Image.asset('assets/r1.PNG')),
