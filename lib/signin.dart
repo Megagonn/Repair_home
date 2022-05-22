@@ -24,7 +24,7 @@ class _SignInState extends State<SignIn> {
               child: Column(
                 children: [
                   const Spacer(),
-                  Image.asset('assets/r1.png'),
+                  Image.asset('assets/r1.PNG'),
                   const Spacer(),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
