@@ -181,12 +181,13 @@ class OfferRow extends StatelessWidget {
                       child: Row(
                         children: [
                           const SizedBox(
-                              width: 90,
-                              child: Text(
-                                'Refer a friend and win a cashback',
-                                softWrap: true,
-                                style: TextStyle(fontWeight: FontWeight.w700),
-                              ),),
+                            width: 90,
+                            child: Text(
+                              'Refer a friend and win a cashback',
+                              softWrap: true,
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                          ),
                           Expanded(
                               // flex: ,
                               child: Image.asset('assets/r1.PNG')),
