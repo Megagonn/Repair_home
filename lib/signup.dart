@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'utitlities.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({Key? key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  const SignUp({ Key? key }) : super(key: key);
 
   @override
-  State<SignIn> createState() => _SignInState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignUpState extends State<SignUp> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController cpasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,7 +31,7 @@ class _SignInState extends State<SignIn> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Login to your account',
+                        'Create new account',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
@@ -69,10 +70,27 @@ class _SignInState extends State<SignIn> {
                               border: InputBorder.none,
                             )),
                       ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 20),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: TextFormField(
+                            controller: cpasswordController,
+                            obscureText: true,
+                            decoration: const InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              hintText: 'Confirm password',
+                              hintStyle: TextStyle(color: Colors.grey),
+                              focusedBorder: InputBorder.none,
+                              border: InputBorder.none,
+                            )),
+                      ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width,
                         child: FlatBtn(
-                          label: 'Sign in',
+                          label: 'Sign up',
                           onPress: () {},
                           fontWeight: FontWeight.w600,
                           labelColor: Colors.white,
@@ -85,7 +103,7 @@ class _SignInState extends State<SignIn> {
                   Column(
                     children: [
                       const Text(
-                        '• Or sign in with -',
+                        '• Or sign up with -',
                         style: TextStyle(color: Colors.grey),
                       ),
                       const SizedBox(height: 12),
