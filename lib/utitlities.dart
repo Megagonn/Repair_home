@@ -204,3 +204,5 @@ class OfferRow extends StatelessWidget {
     );
   }
 }
+
+Color lpink = Color(0xfff6dcd4);

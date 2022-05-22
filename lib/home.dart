@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:repairhome/product.dart';
 import 'package:repairhome/utitlities.dart';
 
 class Home extends StatelessWidget {
@@ -121,7 +122,12 @@ class Home extends StatelessWidget {
                             color: const Color(0xFFEBF0FB),
                             borderRadius: BorderRadius.circular(8)),
                         child: ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Product()));
+                          },
                           leading: Container(
                             padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
@@ -171,7 +177,12 @@ class Home extends StatelessWidget {
                             color: const Color(0xFFEBF0FB),
                             borderRadius: BorderRadius.circular(8)),
                         child: ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Product()));
+                          },
                           leading: Container(
                             padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
