@@ -170,36 +170,36 @@ class Home extends StatelessWidget {
                       const SizedBox(
                         height: 15,
                       ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 6, horizontal: 12),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFFEBF0FB),
-                            borderRadius: BorderRadius.circular(8)),
-                        child: ListTile(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const Product()));
-                          },
-                          leading: Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: const Color(0xFFC7D9FF),
-                            ),
-                            child: const Icon(Icons.tv_outlined),
-                          ),
-                          title: const Text('Fix TV set'),
-                          subtitle: const Text('Living room'),
-                          trailing: const Icon(Icons.chevron_right_outlined),
-                          // tileColor:
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
+                      // Container(
+                      //   padding: const EdgeInsets.symmetric(
+                      //       vertical: 6, horizontal: 12),
+                      //   decoration: BoxDecoration(
+                      //       color: const Color(0xFFEBF0FB),
+                      //       borderRadius: BorderRadius.circular(8)),
+                      //   child: ListTile(
+                      //     onTap: () {
+                      //       Navigator.push(
+                      //           context,
+                      //           MaterialPageRoute(
+                      //               builder: (context) => const Product()));
+                      //     },
+                      //     leading: Container(
+                      //       padding: const EdgeInsets.all(5),
+                      //       decoration: BoxDecoration(
+                      //         borderRadius: BorderRadius.circular(8),
+                      //         color: const Color(0xFFC7D9FF),
+                      //       ),
+                      //       child: const Icon(Icons.tv_outlined),
+                      //     ),
+                      //     title: const Text('Fix TV set'),
+                      //     subtitle: const Text('Living room'),
+                      //     trailing: const Icon(Icons.chevron_right_outlined),
+                      //     // tileColor:
+                      //   ),
+                      // ),
+                      // const SizedBox(
+                      //   height: 15,
+                      // ),
                       // Container(
                       //   padding: const EdgeInsets.symmetric(
                       //       vertical: 6, horizontal: 12),

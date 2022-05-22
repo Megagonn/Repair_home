@@ -17,7 +17,19 @@ class _ProductState extends State<Product> {
           backgroundColor: lpink,
           elevation: 0,
           centerTitle: true,
-          title: const Text('Fix Microwave'),
+          title: const Text(
+            'Fix Microwave',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
+          ),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.chevron_left_outlined,
+              color: Colors.black,
+            ),
+          ),
         ),
         body: Column(
           children: [
@@ -25,8 +37,11 @@ class _ProductState extends State<Product> {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                color: lpink,
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+                  color: lpink,
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                  ),
                 ),
                 padding:
                     const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
@@ -51,17 +66,18 @@ class _ProductState extends State<Product> {
                           child: const Text(
                             'Reviews',
                             style: TextStyle(
-                              color: Color(0xff715751),
-                              fontWeight: FontWeight.bold
-                            ),
+                                color: Color(0xff715751),
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 10,),
+                      const SizedBox(
+                        width: 10,
+                      ),
                       Expanded(
                         child: Container(
-                            padding: const EdgeInsets.all(11),
-                            alignment: Alignment.center,
+                          padding: const EdgeInsets.all(11),
+                          alignment: Alignment.center,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.black,
@@ -78,18 +94,17 @@ class _ProductState extends State<Product> {
                     height: 20,
                   ),
                   InkWell(
-                    onTap: (){},
+                    onTap: () {},
                     child: Container(
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: const [
                           BoxShadow(
-                            blurRadius: .3,
-                            spreadRadius: .4,
-                            color: Colors.grey,
-                            blurStyle: BlurStyle.outer
-                          ),
+                              blurRadius: .3,
+                              spreadRadius: .4,
+                              color: Colors.grey,
+                              blurStyle: BlurStyle.outer),
                         ],
                       ),
                       child: Row(
@@ -111,18 +126,17 @@ class _ProductState extends State<Product> {
                     height: 20,
                   ),
                   InkWell(
-                    onTap: (){},
+                    onTap: () {},
                     child: Container(
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: const [
                           BoxShadow(
-                            blurRadius: .3,
-                            spreadRadius: .4,
-                            color: Colors.grey,
-                            blurStyle: BlurStyle.outer
-                          ),
+                              blurRadius: .3,
+                              spreadRadius: .4,
+                              color: Colors.grey,
+                              blurStyle: BlurStyle.outer),
                         ],
                       ),
                       child: Row(
@@ -148,7 +162,7 @@ class _ProductState extends State<Product> {
                     children: [
                       Expanded(
                         child: InkWell(
-                          onTap: (){},
+                          onTap: () {},
                           child: Container(
                             alignment: Alignment.center,
                             padding: const EdgeInsets.all(14),
@@ -159,17 +173,18 @@ class _ProductState extends State<Product> {
                             child: const Text(
                               'Order repair',
                               style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold
-                              ),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 10,),
+                      const SizedBox(
+                        width: 10,
+                      ),
                       Expanded(
                         child: InkWell(
-                          onTap: (){},
+                          onTap: () {},
                           child: Container(
                             alignment: Alignment.center,
                             padding: const EdgeInsets.all(14),
@@ -187,9 +202,8 @@ class _ProductState extends State<Product> {
                             child: const Text(
                               'Order setup',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold
-                              ),
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
