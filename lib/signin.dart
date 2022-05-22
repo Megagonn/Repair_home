@@ -70,7 +70,7 @@ class _SignInState extends State<SignIn> {
                             )),
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width ,
+                        width: MediaQuery.of(context).size.width,
                         child: FlatBtn(
                           label: 'Sign in',
                           onPress: () {},
@@ -84,40 +84,62 @@ class _SignInState extends State<SignIn> {
                   const Spacer(),
                   Column(
                     children: [
-                       const Text('• Or sign in wiht -', style: TextStyle(color: Colors.grey),),
-                       const SizedBox(
-                         height: 12
-                       ),
+                      const Text(
+                        '• Or sign in with -',
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                      const SizedBox(height: 12),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children:[
-                          Container(
-                            padding: const EdgeInsets.symmetric(vertical:10, horizontal: 25),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(7),
-                              color: Colors.white
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 25),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.white),
+                              child: const Icon(
+                                Icons.facebook_rounded,
+                                size: 40,
+                              ),
                             ),
-                            child: const Icon(Icons.facebook_rounded, size: 40,),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.symmetric(vertical:10, horizontal: 25),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(7),
-                              color: Colors.white
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 25),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.white),
+                              child: const Icon(
+                                Icons.facebook_rounded,
+                                size: 40,
+                              ),
                             ),
-                            child: const Icon(Icons.facebook_rounded, size: 40,),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.symmetric(vertical:10, horizontal: 25),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(7),
-                              color: Colors.white
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 25),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.white),
+                              child: const Icon(
+                                Icons.facebook_rounded,
+                                size: 40,
+                              ),
                             ),
-                            child: const Icon(Icons.facebook_rounded, size: 40,),
-                          ),
-
-                        ]
-                      )
+                          ])
+                    ],
+                  ),
+                  const Spacer(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "• Don't have an account? ",
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: const Text('Sign up', style: TextStyle(color: Colors.blueAccent)),
+                      ),
                     ],
                   ),
                   const Spacer(),
