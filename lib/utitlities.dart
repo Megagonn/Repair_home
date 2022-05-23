@@ -54,7 +54,7 @@ class OfferRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.width-50,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Container(

@@ -9,13 +9,37 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: const Drawer(),
+        drawer: Drawer(
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+            children: [
+              Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'Profile',
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.arrow_drop_down_outlined,
+                  color: Colors.blueAccent,
+                ),
+              ),
+            ],
+          ),
+            ],
+          ),),
+        ),
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Color(0xFFFAFAFA),
+          elevation: 0,
           actions: [
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.shopping_cart_outlined),
+              icon: const Icon(Icons.shopping_cart_outlined, color: Colors.black,),
             ),
           ],
         ),
@@ -57,7 +81,7 @@ class Home extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height - 200,
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -71,7 +95,11 @@ class Home extends StatelessWidget {
                       const SizedBox(
                         height: 15,
                       ),
-                      const OfferRow(),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        physics: PageScrollPhysics(),
+                        child: SizedBox(width: MediaQuery.of(context).size.width,
+                        child: const OfferRow())),
                       const SizedBox(
                         height: 15,
                       ),
@@ -175,33 +203,33 @@ class Home extends StatelessWidget {
                       const SizedBox(
                         height: 15,
                       ),
-                      // Container(
-                      //   padding: const EdgeInsets.symmetric(
-                      //       vertical: 6, horizontal: 12),
-                      //   decoration: BoxDecoration(
-                      //       color: const Color(0xFFEBF0FB),
-                      //       borderRadius: BorderRadius.circular(8)),
-                      //   child: ListTile(
-                      //     onTap: () {
-                      //       Navigator.push(
-                      //           context,
-                      //           MaterialPageRoute(
-                      //               builder: (context) => const Product()));
-                      //     },
-                      //     leading: Container(
-                      //       padding: const EdgeInsets.all(5),
-                      //       decoration: BoxDecoration(
-                      //         borderRadius: BorderRadius.circular(8),
-                      //         color: const Color(0xFFC7D9FF),
-                      //       ),
-                      //       child: const Icon(Icons.tv_outlined),
-                      //     ),
-                      //     title: const Text('Fix TV set'),
-                      //     subtitle: const Text('Living room'),
-                      //     trailing: const Icon(Icons.chevron_right_outlined),
-                      //     // tileColor:
-                      //   ),
-                      // ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 6, horizontal: 12),
+                        decoration: BoxDecoration(
+                            color: const Color(0xFFEBF0FB),
+                            borderRadius: BorderRadius.circular(8)),
+                        child: ListTile(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Product(), settings: RouteSettings(arguments: {'image':"assets/f.png", 'name':'Fridge', 'setup':'20', 'repair':'68'}) ));
+                          },
+                          leading: Container(
+                            padding: const EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: const Color(0xFFC7D9FF),
+                            ),
+                            child: const Icon(Icons.tv_outlined),
+                          ),
+                          title: const Text('Fix TV set'),
+                          subtitle: const Text('Living room'),
+                          trailing: const Icon(Icons.chevron_right_outlined),
+                          // tileColor:
+                        ),
+                      ),
                       // const SizedBox(
                       //   height: 15,
                       // ),
