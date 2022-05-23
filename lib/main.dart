@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:repairhome/cart.dart';
 import 'package:repairhome/product.dart';
 import 'package:repairhome/signin.dart';
+import 'package:repairhome/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SignIn(),
+      home:  Splash(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:repairhome/home.dart';
 import 'package:repairhome/signup.dart';
 
@@ -106,8 +107,7 @@ class _SignInState extends State<SignIn> {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(7),
                                   color: Colors.white),
-                              child: const Icon(
-                                Icons.facebook_rounded,
+                              child:  Icon(Icons.stacked_bar_chart,
                                 size: 40,
                               ),
                             ),
@@ -129,7 +129,7 @@ class _SignInState extends State<SignIn> {
                                   borderRadius: BorderRadius.circular(7),
                                   color: Colors.white),
                               child: const Icon(
-                                Icons.facebook_rounded,
+                                Icons.cabin_outlined,
                                 size: 40,
                               ),
                             ),
