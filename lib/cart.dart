@@ -15,7 +15,7 @@ class _CartState extends State<Cart> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xffF9F9F9),
+          backgroundColor: const Color(0xffF9F9F9),
           elevation: 0,
           centerTitle: true,
           title: const Text(
@@ -34,7 +34,7 @@ class _CartState extends State<Cart> {
         ),
         body: Container(
           padding: const EdgeInsets.all(20),
-          color: Color(0xffF9F9F9),
+          color: const Color(0xffF9F9F9),
           child: Column(
             children: [
               Column(
@@ -67,9 +67,9 @@ class _CartState extends State<Cart> {
                         width: 100,
                         child: Row(
                           children: [
-                            // dropDown ? 
-                            // Text('') : 
-                            Text('\$102'),
+                            // dropDown ?
+                            // Text('') :
+                            const Text('\$102'),
                             const Icon(Icons.chevron_right_outlined),
                           ],
                         ),
@@ -78,26 +78,26 @@ class _CartState extends State<Cart> {
                     ),
                   ),
                   // dropDown
-                      // ? 
-                      ListTile(
-                        leading: Icon(
-                          Icons.remove_circle_outlined,
-                          color: Colors.deepOrange,
-                        ),
-                        title: Text('Set up TV'),
-                        trailing: Text('\$22'),
-                        tileColor: (Color(0xFFEBF0FB)),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.remove_circle_outlined,
-                          color: Colors.deepOrange,
-                        ),
-                        title: Text('Repair TV'),
-                        trailing: Text('\$80'),
-                        tileColor: Color(0xFFEBF0FB),
-                      )
-                      // : const SizedBox.shrink(),
+                  // ?
+                  const ListTile(
+                    leading: Icon(
+                      Icons.remove_circle_outlined,
+                      color: Colors.deepOrange,
+                    ),
+                    title: Text('Set up TV'),
+                    trailing: Text('\$22'),
+                    tileColor: (Color(0xFFEBF0FB)),
+                  ),
+                  const ListTile(
+                    leading: Icon(
+                      Icons.remove_circle_outlined,
+                      color: Colors.deepOrange,
+                    ),
+                    title: Text('Repair TV'),
+                    trailing: Text('\$80'),
+                    tileColor: Color(0xFFEBF0FB),
+                  )
+                  // : const SizedBox.shrink(),
                 ],
               ),
               const SizedBox(
@@ -148,7 +148,37 @@ class _CartState extends State<Cart> {
               //     // tileColor:
               //   ),
               // ),
-              const Spacer()
+              const Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text('Total price'),
+                  Text("\$302")
+                ],
+              ),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: const [
+                      BoxShadow(
+                        blurRadius: .3,
+                        spreadRadius: .4,
+                        color: Colors.grey,
+                      ),
+                    ],
+                  ),
+                  child: const Text(
+                    'Make an order',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
