@@ -90,7 +90,7 @@ class Home extends StatelessWidget {
                       const Text(
                         "Offers",
                         style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 30),
+                            fontWeight: FontWeight.w700, fontSize: 30,),
                       ),
                       const SizedBox(
                         height: 15,
