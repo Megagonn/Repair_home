@@ -99,7 +99,7 @@ class OfferRow extends StatelessWidget {
                               )),
                           Expanded(
                               // flex: ,
-                              child: Image.asset('assets/r1.PNG')),
+                              child: Image.asset('assets/fr.PNG')),
                         ],
                       ),
                     )
@@ -144,7 +144,7 @@ class OfferRow extends StatelessWidget {
                               )),
                           Expanded(
                               // flex: ,
-                              child: Image.asset('assets/r1.PNG')),
+                              child: Image.asset('assets/w.PNG')),
                         ],
                       ),
                     )
@@ -190,7 +190,7 @@ class OfferRow extends StatelessWidget {
                           ),
                           Expanded(
                               // flex: ,
-                              child: Image.asset('assets/r1.PNG')),
+                              child: Image.asset('assets/fr1.PNG')),
                         ],
                       ),
                     )

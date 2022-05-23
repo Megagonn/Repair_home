@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:repairhome/home.dart';
+import 'package:repairhome/signup.dart';
 
 import 'utitlities.dart';
 
@@ -70,12 +71,13 @@ class _SignInState extends State<SignIn> {
                               border: InputBorder.none,
                             )),
                       ),
-                      SizedBox(
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 4),
                         width: MediaQuery.of(context).size.width,
                         child: FlatBtn(
                           label: 'Sign in',
                           onPress: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => const Home()));
@@ -143,7 +145,12 @@ class _SignInState extends State<SignIn> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SignUp()));
+                        },
                         child: const Text('Sign up',
                             style: TextStyle(color: Colors.blueAccent)),
                       ),
