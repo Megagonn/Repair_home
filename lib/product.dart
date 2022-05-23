@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:repairhome/cart.dart';
 import 'package:repairhome/utitlities.dart';
 
 class Product extends StatefulWidget {
@@ -11,14 +12,15 @@ class Product extends StatefulWidget {
 class _ProductState extends State<Product> {
   @override
   Widget build(BuildContext context) {
+  dynamic object = ModalRoute.of(context)!.settings.arguments;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: lpink,
           elevation: 0,
           centerTitle: true,
-          title: const Text(
-            'Fix Microwave',
+          title:  Text(
+            "Fix ${object!['name']}",
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
           ),
           leading: IconButton(
@@ -45,7 +47,7 @@ class _ProductState extends State<Product> {
                 ),
                 padding:
                     const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
-                child: Image.asset('assets/r2.PNG'),
+                child: Image.asset(object['image']),
               ),
             ),
             Container(
@@ -94,7 +96,9 @@ class _ProductState extends State<Product> {
                     height: 20,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const Cart()));
+                    },
                     child: Container(
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
@@ -109,13 +113,13 @@ class _ProductState extends State<Product> {
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Text(
                             "Repair",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "\$52",
+                            "\$${object['repair']}",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -126,7 +130,9 @@ class _ProductState extends State<Product> {
                     height: 20,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const Cart()));
+                    },
                     child: Container(
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
@@ -141,13 +147,13 @@ class _ProductState extends State<Product> {
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Text(
                             "Setup",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "\$12",
+                            "\$${object['setup']}",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -162,7 +168,9 @@ class _ProductState extends State<Product> {
                     children: [
                       Expanded(
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const Cart()));
+                          },
                           child: Container(
                             alignment: Alignment.center,
                             padding: const EdgeInsets.all(14),
@@ -184,7 +192,9 @@ class _ProductState extends State<Product> {
                       ),
                       Expanded(
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const Cart()));
+                          },
                           child: Container(
                             alignment: Alignment.center,
                             padding: const EdgeInsets.all(14),

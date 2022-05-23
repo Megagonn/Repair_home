@@ -126,7 +126,7 @@ class Home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Product()));
+                                    builder: (context) => const Product(), settings: RouteSettings(arguments: {'image':"assets/m.png", 'name':'Microwave', 'setup':'13', 'repair':'45'}) ));
                           },
                           leading: Container(
                             padding: const EdgeInsets.all(5),
@@ -136,8 +136,8 @@ class Home extends StatelessWidget {
                             ),
                             child: const Icon(Icons.tv_outlined),
                           ),
-                          title: const Text('Fix TV set'),
-                          subtitle: const Text('Living room'),
+                          title: const Text('Fix microwave oven'),
+                          subtitle: const Text('Kitchen'),
                           trailing: const Icon(Icons.chevron_right_outlined),
                           // tileColor:
                         ),
@@ -152,7 +152,12 @@ class Home extends StatelessWidget {
                             color: const Color(0xFFEBF0FB),
                             borderRadius: BorderRadius.circular(8)),
                         child: ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Product(), settings: RouteSettings(arguments: {'image':"assets/f.png", 'name':'Fridge', 'setup':'20', 'repair':'68'}) ));
+                          },
                           leading: Container(
                             padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
@@ -161,8 +166,8 @@ class Home extends StatelessWidget {
                             ),
                             child: const Icon(Icons.tv_outlined),
                           ),
-                          title: const Text('Fix TV set'),
-                          subtitle: const Text('Living room'),
+                          title: const Text('Fix Fridge'),
+                          subtitle: const Text('Kitchen'),
                           trailing: const Icon(Icons.chevron_right_outlined),
                           // tileColor:
                         ),
