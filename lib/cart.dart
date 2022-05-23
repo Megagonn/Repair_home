@@ -172,7 +172,7 @@ class _CartState extends State<Cart> {
                     child: const Icon(Icons.tv_outlined),
                   ),
                   title: const Text('Fix Computer'),
-                  subtitle: Text('2 Service'),
+                  subtitle: const Text('2 Service'),
                   trailing: SizedBox(
                     width: 60,
                     child: Row(
