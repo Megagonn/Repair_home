@@ -47,9 +47,9 @@ class _CartState extends State<Cart> {
                         borderRadius: BorderRadius.circular(8)),
                     child: ListTile(
                       onTap: () {
-                        setState(() {
-                          dropDown = !dropDown;
-                        });
+                        // setState(() {
+                        //   dropDown = !dropDown;
+                        // });
                         // Navigator.push(context,
                         //     MaterialPageRoute(builder: (context) => const Product()));
                       },
@@ -64,13 +64,14 @@ class _CartState extends State<Cart> {
                       title: const Text('Fix TV set'),
                       subtitle: Text(dropDown ? 'Living room' : '2 Service'),
                       trailing: SizedBox(
-                        width: 100,
+                        width: 60,
                         child: Row(
-                          children: [
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: const [
                             // dropDown ?
                             // Text('') :
-                            const Text('\$102'),
-                            const Icon(Icons.chevron_right_outlined),
+                            Text('\$102'),
+                            Icon(Icons.chevron_right_outlined),
                           ],
                         ),
                       ),
@@ -148,22 +149,59 @@ class _CartState extends State<Cart> {
               //     // tileColor:
               //   ),
               // ),
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                decoration: BoxDecoration(
+                    color: const Color(0xFFEBF0FB),
+                    borderRadius: BorderRadius.circular(8)),
+                child: ListTile(
+                  onTap: () {
+                    // setState(() {
+                    //   dropDown = !dropDown;
+                    // });
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => const Product()));
+                  },
+                  leading: Container(
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: const Color(0xFFC7D9FF),
+                    ),
+                    child: const Icon(Icons.tv_outlined),
+                  ),
+                  title: const Text('Fix Computer'),
+                  subtitle: Text('2 Service'),
+                  trailing: SizedBox(
+                    width: 60,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        // dropDown ?
+                        // Text('') :
+                        Text('\$200'),
+                        Icon(Icons.chevron_right_outlined),
+                      ],
+                    ),
+                  ),
+                  // tileColor:
+                ),
+              ),
               const Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text('Total price'),
-                  Text("\$302")
-                ],
+                children: const [Text('Total price'), Text("\$302")],
               ),
               InkWell(
                 onTap: () {},
                 child: Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(14),
+                  margin: const EdgeInsets.only(top: 20),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
+                    color: Colors.black,
                     boxShadow: const [
                       BoxShadow(
                         blurRadius: .3,
@@ -175,7 +213,7 @@ class _CartState extends State<Cart> {
                   child: const Text(
                     'Make an order',
                     style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.bold),
+                        color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
